@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.opera.OperaDriver;
+
 
 import com.tutorialsninja.automation.base.Base;
 
@@ -28,18 +28,17 @@ public class Browser {
 			log.info("Chrome Browser is Started" + Base.driver.hashCode());
 			return Base.driver;
 
-		case "ie":
-			WebDriverManager.iedriver().setup();
-			Base.driver = new InternetExplorerDriver();
-			log.info("Internet Explorer Browser is Started" + Base.driver.hashCode());
-			return Base.driver;
-
-		case "opera":
-			WebDriverManager.operadriver().setup();
-			Base.driver = new OperaDriver();
-			log.info("Opera Browser is Started" + Base.driver.hashCode());
-			return Base.driver;
-
+		/*
+		 * case "ie":
+		 * 
+		 * WebDriver.iedriver().setup(); Base.driver = new InternetExplorerDriver();
+		 * log.info("Internet Explorer Browser is Started" + Base.driver.hashCode());
+		 * return Base.driver;
+		 * 
+		 * case "opera": WebDriverManager.operadriver().setup(); Base.driver = new
+		 * OperaDriver(); log.info("Opera Browser is Started" + Base.driver.hashCode());
+		 * return Base.driver;
+		 */
 		case "htmlunit":
 			Base.driver = new HtmlUnitDriver();
 			log.info("HtmlUnit Browser is Started" + Base.driver.hashCode());
